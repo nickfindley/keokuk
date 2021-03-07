@@ -1,0 +1,68 @@
+.calendar-single-meta {
+    h4 {
+        margin-bottom: $paragraph-margin-bottom / 2;
+    }
+
+    dl {
+        display: grid;
+        font-size: calc(var(--base-font-size) * .875);
+        grid-template-columns: 25fr 75fr;
+
+        abbr {
+            border: none;
+        }
+    }
+
+    dt i {
+        color: rgba($body-color, .5);
+        font-size: 75%;
+        vertical-align: 2px;
+    }
+}
+
+.calendar-single-map {
+    box-shadow: $box-shadow;
+    margin-bottom: $paragraph-margin-bottom;
+
+    #tribe-events-gmap-0 {
+        height: 25vh !important;
+    }
+
+    img {
+        box-shadow: none;
+    }
+}
+
+.calendar-footer-nav-single {
+    margin: $paragraph-margin-bottom auto;
+    
+    li {
+        flex: 1 0 50%;
+
+        &:first-child {
+            margin-left: $paragraph-margin-bottom / -2;
+        }
+
+        &:last-child {
+            margin-right: $paragraph-margin-bottom / -2;
+            text-align: right;
+        }
+    }
+
+    a {
+        display: inline-block;
+        height: 100%;
+        line-height: 1.25;
+        padding: $paragraph-margin-bottom / 4;
+        width: 100%;
+
+        span {
+            color: rgba($black, .5);
+            display: block;
+            font-size: calc(var(--base-font-size) * .625);
+            font-weight: 300;
+            letter-spacing: calc(var(--base-font-size) / 10);
+            text-transform: uppercase;
+        }
+    }
+}

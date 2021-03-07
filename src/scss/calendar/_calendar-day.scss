@@ -1,0 +1,16 @@
+.calendar-day-timeslot {
+    background: $black;
+    box-shadow: $box-shadow;
+    margin: $paragraph-margin-bottom * 2 auto $paragraph-margin-bottom;
+    padding: $paragraph-margin-bottom;
+
+    h2 {
+        color: rgba($primary, .875);
+        font-size: calc(var(--base-font-size) * 1.5);
+        font-weight: 400;
+        letter-spacing: calc(var(--base-font-size) / 10);
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

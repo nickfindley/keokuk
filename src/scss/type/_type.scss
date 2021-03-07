@@ -1,0 +1,38 @@
+body {
+    --base-font-size: #{$base-font-size};
+    color: $body-color;
+    font-family: 'Avenir', sans-serif;
+    font-size: var(--base-font-size);
+    font-weight: 400;
+    line-height: 2;
+
+    @include media-breakpoint-up(sm) {
+        --base-font-size: calc(#{$base-font-size} * 1.125);
+        // font-size: $base-font-size * 1.125;
+    }
+
+    @include media-breakpoint-up(md) {
+        --base-font-size: calc(#{$base-font-size} * 1.25);
+        // font-size: $base-font-size * 1.25;
+    }
+
+    @include media-breakpoint-up(lg) {
+        --base-font-size: calc(#{$base-font-size} * 1.375);
+        // font-size: $base-font-size * 1.375;
+    }
+
+    @include media-breakpoint-up(xl) {
+        --base-font-size: calc(#{$base-font-size} * 1.5);
+        // font-size: $base-font-size * 1.5;
+    }
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted $body-color;
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}

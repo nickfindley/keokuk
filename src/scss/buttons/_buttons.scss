@@ -1,0 +1,72 @@
+button,
+.btn,
+.btn-primary,
+input[type="submit"] {
+    appearance: none;
+    background: $black;
+    border: none;
+    box-shadow: $button-box-shadow-light;
+    color: rgba($primary, .75);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Avenir', sans-serif;
+    font-size: calc(var(--base-font-size) * .875);
+    font-weight: 400;
+    line-height: 1;
+    padding: calc(.75rem + 2px) $paragraph-margin-bottom / 2;
+    transition: all .25s linear;
+
+    &:active,
+    &:focus,
+    &:hover {
+        border: none;
+        box-shadow: $button-box-shadow-dark;
+        color: $primary;
+    }
+
+    &[disabled],
+    &[disabled]:active,
+    &[disabled]:focus,
+    &[disabled]:hover {
+        background: $gray-light;
+        box-shadow: none;
+        color: $gray;
+        cursor: not-allowed;
+    }
+}
+
+.btn-secondary {
+    background: $gray-lighter;
+    color: $gray-dark;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $black;
+    }
+}
+
+.btn-yellow {
+    background: $primary;
+    color: rgba($black, .875) !important;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: $black;
+    }
+}
+
+.btn-bold {
+    font-weight: 700;
+}
+
+.btn-sm,
+.btn-small {
+    font-size: calc(var(--base-font-size) * .875);
+}
+
+.btn-lg,
+.btn-large {
+    font-size: calc(var(--base-font-size) * 1.125);
+}

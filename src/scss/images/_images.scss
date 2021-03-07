@@ -1,0 +1,60 @@
+img {
+    box-shadow: $box-shadow;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+img.alignleft,
+img.aligncenter,
+img.alignright,
+img.aligncenter,
+img.alignnone {
+    box-shadow: $box-shadow;
+}
+
+.wp-block-image.img-no-shadow img,
+.wp-block-image.no-shadow img,
+.wp-block-image.img-no-shadow figure img,
+.wp-block-image.no-shadow figure img {
+    box-shadow: none !important;
+}
+
+.aligncenter,
+.alignleft,
+.alignright,
+.alignnone {
+    display: block;
+    margin: 0 auto $paragraph-margin-bottom;
+    text-align: center;
+}
+
+.alignleft {
+    @include media-breakpoint-up(sm) {
+        display: inline;
+        float: left;
+        margin-left: 0;
+        margin-right: $paragraph-margin-bottom;
+    }
+}
+
+.alignright {
+    @include media-breakpoint-up(sm) {
+        display: inline;
+        float: right;
+        margin-left: $paragraph-margin-bottom;
+        margin-right: 0;
+    }
+}
+
+.aligncenter,
+.alignnone {
+    clear: both;
+    display: block;
+    margin: 0 auto $paragraph-margin-bottom;
+    max-width: 100%;
+}
+
+img.alignnone {
+    min-width: 100%;
+}

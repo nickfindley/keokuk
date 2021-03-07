@@ -1,0 +1,21 @@
+.article-meta {
+    color: rgba($black, .75);
+    font-size: 75%;
+    font-weight: 300;
+    letter-spacing: calc(var(--base-font-size) / 10);
+    margin: $paragraph-margin-bottom / 2 0;
+    text-transform: uppercase;
+
+    a,
+    a:hover {
+        border: none;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .article-meta-last {
+        padding-left: $paragraph-margin-bottom / 2;
+    }
+}

@@ -1,0 +1,19 @@
+@mixin links-on-black {
+    border-bottom: 2px solid rgba($primary, .25);
+    color: rgba($primary, .875);
+
+    &:hover {
+        border-bottom: 2px solid rgba($primary, .75);
+        color: $primary;
+    }
+}
+
+@mixin links-on-yellow {
+    border-bottom: 2px solid rgba($black, .25);
+    color: rgba($black, .875);
+
+    &:hover {
+        border-bottom: 2px solid rgba($black, .75);
+        color: $black;
+    }
+}

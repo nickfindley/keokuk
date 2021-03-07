@@ -1,0 +1,101 @@
+.flickity {
+    @extend .break-container;
+    margin-bottom: $paragraph-margin-bottom;
+}
+
+.flickity-viewport {
+    overflow: visible !important;
+}
+
+.flickity-event {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    margin: $paragraph-margin-bottom $paragraph-margin-bottom 0 0;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+        width: 87.5%;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: calc(var(--base-font-size) * .75);
+        width: 50%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        width: 37.5%;
+    }
+
+    &:first-child {
+        margin-top: $paragraph-margin-bottom;
+    }
+
+    .article-header {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: $paragraph-margin-bottom !important;
+        min-height: calc(var(--base-font-size) * 7);
+        padding: $paragraph-margin-bottom / 2;
+        transition: all .5s linear;
+        width: 100%;
+
+        h3 {
+            font-size: calc(var(--base-font-size) * 1.25);
+            margin-bottom: 0;
+        }
+    }
+
+    &:not(.is-selected) {
+        .article-header,
+        .post-thumbnail img {
+            box-shadow: none;
+        }
+    }
+
+    .article-meta {
+        font-size: calc(var(--base-font-size) * .625);
+        margin: $paragraph-margin-bottom / 8 0 0;
+
+        p {
+            margin: 0;
+        }
+
+        .venue-link {
+            font-size: calc(var(--base-font-size) * .5);
+        }
+    }
+
+    &.title-slide {
+        align-items: center;
+        background: $black;
+        box-shadow: none;
+        color: rgba($primary, .625);
+        flex-wrap: wrap;
+        height: 50%;
+        justify-content: center;
+        min-height: 10rem;
+        padding: 2rem;
+        text-align: center;
+        transition: box-shadow .5s linear;
+
+        &.is-selected {
+            box-shadow: $box-shadow;
+        }
+
+        a {
+            @include links-on-black;
+        }
+
+        p {
+            font-size: calc(var(--base-font-size) * 1.125);
+            line-height: 1.25;
+        }
+    }
+}
+
+ol.flickity-page-dots {
+    margin-bottom: $paragraph-margin-bottom;
+}

@@ -1,0 +1,36 @@
+.small {
+    font-size: 75%;
+}
+
+.large {
+    font-size: 125%;
+}
+
+.muted {
+    color: rgba($body-color, .5);
+}
+
+.align-left,
+.text-left {
+    text-align: left;
+}
+
+.align-center,
+.text-center {
+    text-align: center;
+}
+
+.align-right,
+.text-right {
+    text-align: right;
+}
+
+.broadcast a {
+    font-weight: 700;
+}
+
+.caps {
+    font-weight: 300;
+    letter-spacing: calc(var(--base-font-size) / 10);
+    text-transform: uppercase;
+}

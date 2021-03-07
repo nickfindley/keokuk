@@ -1,0 +1,39 @@
+.modal {
+    a.glink {
+        border-bottom: none;
+        transition: all .25s ease-in-out;
+
+        // & > span {
+        //     border-bottom: none;
+            
+        // }
+
+        &:hover {
+            border: none;
+            
+            & > span {
+                border-bottom: 1px solid rgba($black, .875);
+            }
+        }
+
+        img {
+            box-shadow: none;
+            max-width: 24px;
+            min-width: 24px;
+            padding-right: $paragraph-margin-bottom / 4;
+            vertical-align: middle;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+
+        .notranslate {
+            border-bottom: none;
+            color: rgba($body-color, .75);
+            font-size: 75%;
+            font-style: italic;
+            vertical-align: baseline;
+        }
+    }
+}

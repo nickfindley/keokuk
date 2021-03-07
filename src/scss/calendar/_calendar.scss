@@ -1,0 +1,29 @@
+.tribe-events-ajax-loading {
+    box-shadow: none;
+    display: none;
+    left: 50%;
+    position: absolute;
+
+    .tribe-events-spinner-medium {
+        box-shadow: none;
+        height: 24px;
+        margin-left: -12px;
+        width: 24px;
+    }
+}
+
+.tribe-events-notices {
+    @extend .alert-message;
+}
+
+.calendar-footer-nav {
+    @extend .pagination;
+    
+    ul {
+        justify-content: space-between;
+    }
+
+    li a {
+        padding: $paragraph-margin-bottom / 2;
+    }
+}

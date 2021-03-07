@@ -1,0 +1,35 @@
+.pagination {
+    @extend .container;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: $paragraph-margin-bottom;
+        padding-left: 0;
+    }
+
+    li {
+        margin: 0 $paragraph-margin-bottom / 8;
+        
+        a {
+            border: none;
+            box-shadow: none;
+            padding: $paragraph-margin-bottom / 4;
+            transition: all .25s linear;
+
+            &:hover {
+                background: $primary;
+                border: none;
+                box-shadow: $box-shadow;
+            }
+        }
+
+        &.active span {
+            background: $black;
+            box-shadow: $box-shadow-light;
+            color: $primary;
+            padding: $paragraph-margin-bottom / 4;
+        }
+    }
+}

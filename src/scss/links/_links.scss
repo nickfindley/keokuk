@@ -1,0 +1,28 @@
+a {
+    border-bottom: 2px solid $link-border-color;
+    color: $link-color;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+
+    &:hover {
+        border-bottom: 2px solid $link-hover-border-color;
+        color: $link-hover-color;
+    }
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    border: none !important;
+    color: rgba($black, .875);
+
+    &:hover {
+        border: none;
+        color: $black;
+    }
+}
+
+// see mixins/links-on-color

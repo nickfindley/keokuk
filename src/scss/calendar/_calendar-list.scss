@@ -1,0 +1,18 @@
+.calendar-list {
+    padding-top: $paragraph-margin-bottom;
+}
+
+.calendar-list-event {
+    .article-meta {
+        font-size: calc(var(--base-font-size) * .75);
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.calendar-list-event-time {
+    @extend .article-meta;
+    font-size: calc(var(--base-font-size) * .75);
+}

@@ -1,0 +1,53 @@
+.page-header {
+    background: $primary;
+    box-shadow: $box-shadow;
+    margin: 0 0 $paragraph-margin-bottom;
+    padding: $paragraph-margin-bottom 0 $paragraph-margin-bottom;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+        margin-bottom: $paragraph-margin-bottom * 2;
+        padding: $paragraph-margin-bottom 0;
+    }
+
+    &.has-featured-image {
+        padding-top: 0;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: $paragraph-margin-bottom;
+        }
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .post-thumbnail {
+        margin: 0 0 $paragraph-margin-bottom / 2;
+        max-width: 100%;
+
+        @include media-breakpoint-up(sm) {
+            margin: $paragraph-margin-bottom / 2 0;
+            width: calc(100% + #{$paragraph-margin-bottom});
+        }
+
+        img {
+            box-shadow: $box-shadow-dark;
+
+            @include media-breakpoint-up(sm) {
+                border: $paragraph-margin-bottom / 2 solid $black;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3 {
+        margin: 0 0 $paragraph-margin-bottom / 2;
+
+        .subheading,
+        .subtitle {
+            font-size: 37.5%;
+        }
+    }
+}

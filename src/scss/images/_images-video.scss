@@ -1,0 +1,23 @@
+iframe,
+video {
+    max-width: 100%;
+}
+
+video {
+    box-shadow: $box-shadow;
+}
+
+div.wp-block-embed__wrapper {
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+
+    iframe {
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
+}

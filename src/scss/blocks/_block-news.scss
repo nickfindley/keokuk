@@ -1,0 +1,94 @@
+.news {
+    @extend .break-container;
+
+    & > header {
+        background: $black;
+        box-shadow: $box-shadow;
+        color: rgba($primary, .625);
+        margin: $paragraph-margin-bottom auto;
+        padding: $paragraph-margin-bottom;
+        text-align: center;
+
+        @include media-breakpoint-up(md) {
+            margin-left: $paragraph-margin-bottom / -4;
+            margin-right: $paragraph-margin-bottom / -4;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin: $paragraph-margin-bottom auto;
+            max-width: calc(#{$container-md-width} - #{$paragraph-margin-bottom});
+        }
+
+        h2 {
+            color: rgba($primary, .875);
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: calc(var(--base-font-size) * 1.125);
+            line-height: 1.25;
+        }
+
+        a {
+            @include links-on-black;
+        }
+    }
+
+    article.has-featured-image {
+        @include media-breakpoint-up(md) {
+            align-items: center;
+            display: grid;
+            grid-column-gap: $grid-gap;
+            grid-row-gap: $grid-gap / 2;
+            grid-template-areas:
+                "header header"
+                "image content";
+            grid-template-columns: repeat(2, 50fr);
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 40fr 60fr;
+        }
+
+        @include media-breakpoint-up(xl) {
+            grid-template-columns: repeat(2, 50fr);
+        }
+
+        .post-thumbnail {
+            grid-area: image;
+            margin: $paragraph-margin-bottom / 2 0;
+
+            @include media-breakpoint-up(md) {
+                margin: $paragraph-margin-bottom / 2 0 0;
+            }
+        }
+
+        .article-content {
+            grid-area: content;
+        }
+    }
+
+    .article-header {
+        background: transparent;
+        box-shadow: none;
+        grid-area: header;
+        margin: 0 auto !important;
+        max-width: $container-md-width;
+        padding: 0;
+
+        h3 {
+            margin-bottom: 0;
+        }
+    }
+
+    .article-content {
+        @include media-breakpoint-up(md) {
+            font-size: calc(var(--base-font-size) * .875);
+        }
+    }
+
+    article:not(.has-featured-image) {
+        margin: 0 auto;
+        max-width: calc(#{$container-md-width} - #{$paragraph-margin-bottom});
+    }
+}

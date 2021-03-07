@@ -1,0 +1,53 @@
+.follow {
+    background: $primary;
+    box-shadow: $box-shadow;
+    margin: $paragraph-margin-bottom auto;
+    padding: $paragraph-margin-bottom;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        margin: $paragraph-margin-bottom $paragraph-margin-bottom / -4;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin: $paragraph-margin-bottom auto;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+}
+
+.follow-icons {
+    a {
+        align-items: center;
+        background: $black;
+        border: none;
+        border-radius: 50%;
+        box-shadow: $box-shadow-light;
+        color: rgba($primary, .875);
+        display: inline-flex;
+        font-size: 2.5rem;
+        height: 4rem;
+        justify-content: center;
+        margin: 0 $paragraph-margin-bottom / 4;
+        transition: all .25s linear;
+        width: 4rem;
+
+        &:hover {
+            border: none;
+            box-shadow: $box-shadow-dark;
+            color: $primary;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 5rem;
+            margin: 0 $paragraph-margin-bottom / 2;
+            width: 5rem;
+        }
+    }
+}

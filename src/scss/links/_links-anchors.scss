@@ -1,0 +1,22 @@
+// provide padding to anchor elements
+// to avoid being hidden under navbar
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id],
+p#disclaimer {
+    display: block;
+    position: relative;
+    margin-top: calc((var(--padding-for-nav) + #{$paragraph-margin-bottom}) * -1); 
+    padding-top: calc(var(--padding-for-nav) + #{$paragraph-margin-bottom});
+    z-index: -1;
+}
+
+p#disclaimer {
+    z-index: 1;
+}
+
+a[href="#toc"] {
+    border-bottom-width: 1px;
+}

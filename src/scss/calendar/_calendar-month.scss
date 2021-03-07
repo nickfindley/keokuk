@@ -1,0 +1,235 @@
+.calendar-month {
+    margin: $paragraph-margin-bottom 0;
+
+    @include media-breakpoint-up(md) {
+        margin: $paragraph-margin-bottom 0 0;
+        padding: 0 $paragraph-margin-bottom;
+    }
+}
+
+.calendar-month-grid {
+    border-bottom: 1px solid rgba($black, .125);
+    border-collapse: collapse;
+    margin-bottom: $paragraph-margin-bottom;
+    padding: 0 $paragraph-margin-bottom;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        border-bottom: none;
+    }
+
+    thead {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            border: 1px solid $black;
+            display: table-header-group;
+        }
+    }
+
+    tr {
+        display: table;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            display: table-row;
+        }
+
+        &:last-child td:last-child {
+            border-bottom: 1px solid rgba($black, .125);
+        }
+    }
+
+    th {
+        background: $black;
+        color: rgba($primary, .875);
+        font-size: calc(var(--base-font-size) * .75);
+        font-weight: 300;
+        letter-spacing: calc(var(--base-font-size) / 10);
+        line-height: 1;
+        padding: $paragraph-margin-bottom / 2 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    td {
+        border-top: 1px solid rgba($black, .125);
+        display: table-row;
+        font-size: inherit;
+        height: 6rem;
+        vertical-align: middle;
+
+        @include media-breakpoint-up(md) {
+            border: 1px solid rgba($black, .125);
+            display: table-cell;
+            height: 8rem;
+            padding: $paragraph-margin-bottom / 4 $paragraph-margin-bottom / 4 $paragraph-margin-bottom / 2;
+            vertical-align: top;
+            width: 14.2857%;
+        }
+
+        &.tribe-events-othermonth {
+            display: none;
+
+            @include media-breakpoint-up(md) {
+                display: table-cell;
+            }
+        }
+    }
+
+    .tooltip {
+        background: $primary;
+        border: 0;
+        bottom: 0;
+        box-shadow: $box-shadow;
+        color: $body-color;
+        display: none;
+        left: $paragraph-margin-bottom / 4;
+        line-height: 1.5;
+        padding: $paragraph-margin-bottom / 2;
+        position: absolute;
+        right: auto;
+        width: $paragraph-margin-bottom * 10;
+        z-index: 1001;
+
+        @include media-breakpoint-down(md) {
+            display: none !important;
+        }
+
+        .tooltip-inner {
+            position: relative;
+        }
+
+        h3 {
+            font-size: calc(var(--base-font-size) * .875);
+            font-weight: 400;
+        }
+
+        .tooltip-date {
+            font-size: calc(var(--base-font-size) * .5);
+            font-weight: 300;
+        }
+
+        .tooltip-image {
+            padding: $paragraph-margin-bottom / 2 0;
+        }
+
+        .tooltip-description {
+            font-size: calc(var(--base-font-size) * .625);
+            font-weight: 300;
+        }
+    }
+
+    .tribe-events-right .tooltip {
+        left: auto;
+        right: $paragraph-margin-bottom / 4;
+    }
+}
+
+.calendar-month-day {
+    background: $primary;
+    color: rgba($black, .875);
+    display: table-cell;
+    font-size: calc(var(--base-font-size) * 2);
+    font-weight: 700;
+    line-height: 1;
+    padding: $paragraph-margin-bottom / 2;
+    text-align: center;
+    vertical-align: middle;
+    width: 25%;
+
+    @include media-breakpoint-up(md) {
+        background: transparent;
+        display: block;
+        font-size: calc(var(--base-font-size) * .75);
+        font-weight: 400;
+        padding: $paragraph-margin-bottom / 4 0;
+        text-align: left;
+    }
+
+    a {
+        border: none;
+    }
+}
+
+.tribe-events-present .calendar-month-day {
+    background: $black;
+    box-shadow: $box-shadow;
+    color: rgba($primary, .875);
+
+    @include media-breakpoint-up(md) {
+        background: transparent;
+        box-shadow: none;
+        color:rgba($black, .875);
+    }
+}
+
+.calendar-month-dayname {
+    display: block;
+    font-size: calc(var(--base-font-size) * .75);
+    font-weight: 300;
+    letter-spacing: calc(var(--base-font-size) / 10);
+    margin-bottom: $paragraph-margin-bottom / 4;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+        display: none;
+    }
+}
+
+.calendar-month-daynum {
+    letter-spacing: calc(var(--base-font-size) / -10);
+
+    @include media-breakpoint-up(md) {
+        letter-spacing: 0;
+    }
+}
+
+.calendar-month-day-events {
+    padding: $paragraph-margin-bottom / 4 $paragraph-margin-bottom / 2;
+
+    @include media-breakpoint-up(md) {
+        padding: 0;
+    }
+}
+
+.calendar-month-event {
+    position: relative;
+
+    h3 {
+        font-size: calc(var(--base-font-size) * .875);
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 1.25;
+        margin: 0;
+        padding: $paragraph-margin-bottom / 4 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: calc(var(--base-font-size) * .625);
+        }
+
+        a {
+            border-bottom: 1px solid $link-border-color !important;
+            font-size: inherit;
+
+            &:hover {
+                border-bottom: 1px solid $link-hover-border-color !important;
+            }
+        }
+    }
+}
+
+.calendar-month-more {
+    font-size: calc(var(--base-font-size) * .625);
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0;
+    padding: $paragraph-margin-bottom / 4 0;
+}
+
+.tribe-events-othermonth {
+    .calendar-month-day,
+    .calendar-month-event-title {
+        opacity: .5;
+    }
+}

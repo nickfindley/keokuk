@@ -1,0 +1,4 @@
+.article-header {
+    @extend .page-header;
+    margin-bottom: $paragraph-margin-bottom * 1.5 !important;
+}

@@ -1,0 +1,13 @@
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+$container-sm-width:  570px;
+$container-md-width:  720px;
+$container-lg-width:  960px;
+$container-xl-width:  1140px;
+
+$grid-gap: $paragraph-margin-bottom;

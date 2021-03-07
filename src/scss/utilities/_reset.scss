@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.site-wrapper {
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol, dl,
+blockquote,
+address {
+    margin: 0 0 $paragraph-margin-bottom;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul, ol {
+    padding-left: $paragraph-margin-bottom / 2;
+}
