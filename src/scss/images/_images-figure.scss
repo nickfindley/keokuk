@@ -15,37 +15,3 @@ figcaption {
     font-weight: 300;
     text-align: center;
 }
-
-.container-article-content figure.wp-block-embed,
-.container-article-content figure.wp-block-image,
-.container-article-content figure.wp-block-video,
-.container-article-content > div.wp-block-embed,
-.container-article-content > div.wp-block-image
-.container-article-content > div.wp-block-video {
-    margin: 0 0 $paragraph-margin-bottom;
-
-    @include media-breakpoint-up(sm) {
-        max-width: $container-sm-width;
-    }
-
-    @include media-breakpoint-up(md) {
-        max-width: $container-md-width;
-    }
-
-    @include media-breakpoint-up(lg) {
-        max-width: $container-lg-width;
-        margin-left: calc((#{$container-lg-width} - #{$container-md-width}) / -2);
-        margin-right: calc((#{$container-lg-width} - #{$container-md-width}) / -2);
-    }
-
-    @include media-breakpoint-up(xl) {
-        max-width: $container-xl-width;
-        margin-left: calc((#{$container-xl-width} - #{$container-md-width}) / -2);
-        margin-right: calc((#{$container-xl-width} - #{$container-md-width}) / -2);
-    }
-
-    &.contained {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}

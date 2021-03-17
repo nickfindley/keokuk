@@ -16,7 +16,7 @@ if ( function_exists( 'acf_register_block_type' ) ) :
         );
     }
 
-    add_action('acf/init', 'dutchtown_acf_init_masonry');
+    add_action( 'acf/init', 'dutchtown_acf_init_masonry' );
 endif;
 
 if ( function_exists( 'acf_add_local_field_group' ) ) :

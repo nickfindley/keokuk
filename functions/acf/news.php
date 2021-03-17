@@ -13,7 +13,7 @@ if ( function_exists( 'acf_register_block_type' ) ) :
             'mode'              => 'edit'
         ));
     }
-    add_action('acf/init', 'dutchtown_acf_init_news');
+    add_action( 'acf/init', 'dutchtown_acf_init_news' );
 endif;
 
 if ( function_exists('acf_add_local_field_group') ):

@@ -3,6 +3,7 @@ $functions_dir = get_template_directory() . '/functions/';
 
 require $functions_dir . 'archive-title.php';
 require $functions_dir . 'broadcast.php';
+// require $functions_dir . 'deny-blocks.php';
 require $functions_dir . 'excerpt.php';
 require $functions_dir . 'multisite-widgets.php';
 require $functions_dir . 'oxford-categories.php';
@@ -18,12 +19,16 @@ require $functions_dir . 'widgets-init.php';
 require $functions_dir . 'utilities/autoversion.php';
 require $functions_dir . 'utilities/format-phone.php';
 require $functions_dir . 'utilities/get-primary-taxonomy-term.php';
+require $functions_dir . 'utilities/hex-to-rgb.php';
 require $functions_dir . 'utilities/temp-column.php';
 
 require $functions_dir . 'acf/options.php';
 require $functions_dir . 'acf/options/options-places-settings.php';
 require $functions_dir . 'acf/options/options-subsite-menu.php';
 
+require $functions_dir . 'acf/chartjs.php';
+require $functions_dir . 'acf/chartjs-bar.php';
+require $functions_dir . 'acf/chartjs-line.php';
 require $functions_dir . 'acf/flickity-events.php';
 require $functions_dir . 'acf/follow.php';
 require $functions_dir . 'acf/masonry.php';

@@ -10,7 +10,7 @@ get_header();
 ?>
     <main id="content">
 <?php
-        get_template_part( 'template-parts/article' );
+        get_template_part( 'template-parts/article-page' );
 ?>
     </main>
 <?php

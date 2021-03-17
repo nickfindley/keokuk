@@ -1,0 +1,104 @@
+iframe,
+video {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+video {
+    box-shadow: $box-shadow;
+}
+
+.container-article-content > .wp-block-embed,
+.container-article-content > .wp-block-video {
+    margin: 0 0 $paragraph-margin-bottom;
+
+    @include media-breakpoint-up(sm) {
+        max-width: $container-sm-width;
+    }
+
+    @include media-breakpoint-up(md) {
+        max-width: $container-md-width;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: $container-lg-width;
+        margin-left: calc((#{$container-lg-width} - #{$container-md-width}) / -2);
+        margin-right: calc((#{$container-lg-width} - #{$container-md-width}) / -2);
+    }
+
+    @include media-breakpoint-up(xl) {
+        max-width: $container-xl-width;
+        margin-left: calc((#{$container-xl-width} - #{$container-md-width}) / -2);
+        margin-right: calc((#{$container-xl-width} - #{$container-md-width}) / -2);
+    }
+
+    &.contained {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+div.wp-block-embed__wrapper {
+    box-shadow: $box-shadow;
+    position: relative;
+}
+
+.is-type-video {
+    div.wp-block-embed__wrapper {
+        overflow: hidden;
+        padding-top: 56.25%;
+
+        iframe {
+            height: 100%;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+        }
+    }
+}
+
+.wp-block-embed-spotify {
+    margin: 0 auto $paragraph-margin-bottom;
+
+    &.wp-embed-aspect-9-16 {
+        max-width: 300px;
+
+        iframe {
+            height: 380px;
+            position: relative;
+        }
+    }
+
+    &.wp-embed-aspect-21-9 {
+        max-width: $container-md-width;
+
+        iframe {
+            height: 232px;
+            position: relative;
+        }
+    }
+
+    div.wp-block-embed__wrapper {
+        box-shadow: none;
+        filter: drop-shadow($box-shadow);
+        overflow: visible;
+        padding-top: 0;
+    }
+}
+
+.wp-block-embed-twitter {
+    margin: 0 auto $paragraph-margin-bottom;
+    max-width: 500px;
+    
+    div.wp-block-embed__wrapper {
+        box-shadow: none;
+        filter: drop-shadow($box-shadow);
+        overflow: visible;
+        padding-top: 0;
+    }
+
+    .twitter-tweet {
+        margin: 0 auto !important;
+    }
+}
